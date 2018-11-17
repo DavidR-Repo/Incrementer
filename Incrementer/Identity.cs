@@ -11,6 +11,9 @@ namespace Incrementer
         {
             if (newId.Length > 3) throw new Exception("invalid id length");
             if (!IsValidChar(newId)) throw new Exception("invalid id " + newId);
+            // Warning!
+            // does not check for invalid forms: non-Z char followed by alpha char
+            //                                  or lowercase letters
 
             Value = new char[] { newId[0], newId[1], newId[2] };
 
@@ -92,6 +95,9 @@ namespace Incrementer
         {
             if (newId.Length > 3) throw new Exception("in Set: invalid id length");
             if (!IsValidChar(newId)) throw new Exception("in Set(): invalid id " + newId);
+            // Warning!
+            // does not check for invalid forms: non-Z char followed by alpha char
+            //                                  or lowercase letters
 
             Value[0] = newId[0];
             Value[1] = newId[1];
