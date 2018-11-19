@@ -112,4 +112,8 @@ export class Identity {
     }
     return true;
   }
+
+  toString = (): string => {
+    return `${this.value[0]}${this.value[1]}${this.value[2]}`;
+  }
 }

@@ -7,6 +7,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 class Identity {
     constructor(newId) {
+        this.toString = () => {
+            return `${this.value[0]}${this.value[1]}${this.value[2]}`;
+        };
         if (newId.length > 3) {
             throw Error("Invalid Id Length");
         }
