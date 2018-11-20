@@ -10,6 +10,11 @@ namespace Incrementer
     {
         static void Main(string[] args)
         {
+
+            var test = new Identity("A22");
+            test.Increment();
+            Console.Write(test);
+
             System.Console.WriteLine("Testing 000 - 030 ...");
             Identity i = new Identity("000");
             for(int count = 0; count<31; count++)
@@ -50,6 +55,9 @@ namespace Incrementer
                 i.Increment();
             }
             System.Console.WriteLine(i + "\t");
+
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
         }      
     }
 }
